@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+logoFile="assets/crave_and_feast/icon.png"
+description='''
+Adds a dynamic craving system that rewards players for eating a variety of foods.
+Every player has one food they currently crave - consuming it grants double nourishment,
+while eating the same food repeatedly provides diminishing returns.
+
+Unofficial NeoForge 1.21.1 port of Crave & Feast by skps2010 (MIT), ported by Vancomb.
+This port also adds an in-game settings screen, a draggable/resizable HUD editor, and a
+searchable craving-pool editor for including or excluding individual foods.
+'''
+
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
